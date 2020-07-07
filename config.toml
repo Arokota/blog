@@ -1,0 +1,104 @@
+baseurl = "https://www.arokota.com"
+DefaultContentLanguage = "en"
+#DefaultContentLanguage = "ja"
+title = "Arokota's Blog"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+#pygmentsUseClassic = true
+#pygmentOptions = "linenos=inline"
+#disqusShortname = "XXX"
+#googleAnalytics = "UA-111167042-2"
+
+[Params]
+  homeTitle = "Arokota's Blog" # Set a different text for the header on the home page
+  subtitle = "Occasional posts about things that interest me in the cybersecurity world, mainly CTF writeups, Red Team things, and the occasional GitHub project."
+  logo = "/img/galaga.jpg"
+  favicon = "/img/galaga.jpg"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = false
+  comments = true
+  readingTime = true
+  useHLJS = true
+  socialShare = true
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+
+#[[Params.bigimg]]
+#  src = "img/triangle.jpg"
+#  desc = "Triangle"
+#[[Params.bigimg]]
+#  src = "img/sphere.jpg"
+#  desc = "Sphere"
+#  # position: see values of CSS background-position.
+#  position = "center top"
+#[[Params.bigimg]]
+#  src = "img/hexagon.jpg"
+#  desc = "Hexagon"
+
+[Author]
+  name = "Arokota"
+  #website = "yourwebsite.com"
+  email = "contact@arokota.com"
+  #facebook = "username"
+  #googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
+  github = "Arokota"
+  #gitlab = "username"
+  #bitbucket = "username"
+  twitter = "Arokota"
+  #reddit = "username"
+  #linkedin = "username"
+  #xing = "username"
+  #stackoverflow = "users/XXXXXXX/username"
+  #snapchat = "username"
+  #instagram = "username"
+  #youtube = "user/username" # or channel/channelname
+  #soundcloud = "username"
+  #spotify = "username"
+  #bandcamp = "username"
+  #itchio = "username"
+  #vk = "username"
+  #paypal = "username"
+  #telegram = "username"
+
+[[menu.main]]
+    name = "Blog"
+    identifier = "Blog"
+    weight = 1
+
+[[menu.main]]
+    name = "HTB"
+    identifier = "HTB"
+    weight = 1
+
+[[menu.main]]
+    parent = "Blog"
+    name = "DHS CTF"
+    url = "post/2019-02-17-dhs-ctf"
+    weight = 1
+
+[[menu.main]]
+    parent = "HTB"
+    name = "Netmon"
+    url = "post/2019-07-22-htbnetmon"
+    weight = 1
+
+#[[menu.main]]
+#    parent = "samples"
+#    name = "Math Sample"
+#    url = "post/2017-03-05-math-sample"
+#    weight = 2
+
+#[[menu.main]]
+#    parent = "samples"
+#    name = "Code Sample"
+#    url = "post/2016-03-08-code-sample"
+#    weight = 3
+
+#[[menu.main]]
+#    name = "Tags"
+#    url = "tags"
+#    weight = 3
