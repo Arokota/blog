@@ -1,5 +1,6 @@
 # Personal Website
 
-## Current Theme: Hugo-Theme-Nix
+## Current Theme: [Beautiful-Hugo](https://github.com/halogenica/beautifulhugo)
 
-## Hosted used Netlify
+## Hosted used ~~Netlify~~ [Now](https://vercel.com)
+
