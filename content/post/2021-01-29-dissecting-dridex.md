@@ -9,11 +9,11 @@ bigimg: [{src: "/img/DRIDEX.png"}]
 ## Grabbing some Samples
 Since I wanted to make sure and grab some more recent samples, I headed over to [Malware Bazaar](https://bazaar.abuse.ch/) to grab a few samples.  Since the database is searchable, I can throw in keyword searches (like Dridex) in order to filter the malware samples that I get back.  
 
-![Malware Bazaar](malwarebazaar.png)
+![Malware Bazaar](/img/malwarebazaar.png)
 
 Here I went ahead and search for `signature:dridex` and filter by the most recently submissions.  Now, since I'm grabbing samples that have already been reporting, I know that I'm not going to be submitting the file hash that actually blocks it.  What I can do is extract other IOCs from the files that could possibly help out other malware researchers catch samples more quickly next time.
 
-![Searching Malware Bazaar](search_bazaar.png)
+![Searching Malware Bazaar](/img/search_bazaar.png)
 
 
 1. `09cceb619174c99d026734f860f26cda0107af31b9153a9f7d6613c86fd57772.xlsm`
@@ -31,15 +31,15 @@ Here I went ahead and search for `signature:dridex` and filter by the most recen
 
 Everyone single one of these consisted of the same file format, which isn't surprising seeing as they were probably all apart of the same campaign.
 
-![Showing filetype](filetype.png)
+![Showing filetype](/img/filetype.png)
 
 All of the samples contained extremely current dates implying that the matter was urgent.  Additionally they all were named appropriately for a scenario that would involve Excel.  Lastly, all of the documents were financially motivated in order to compel the victim in clicking faster with less forethought.
-![File1](filename_1.png)
-![File2](filename_2.png)
-![File3](filename_3.png)
+![File1](/img/filename_1.png)
+![File2](/img/filename_2.png)
+![File3](/img/filename_3.png)
 
 
-![SE Enable Content](enable_content_pic.png)
+![SE Enable Content](/img/enable_content_pic.png)
 
 
 ## Focusing Efforts
@@ -182,7 +182,7 @@ Great, so we were able to extract the code onto our Linux machine, but now we wa
 
 Now normally, this isn't a big ask -- we're able to simply able to open the document and get to work.  However with this variant we were greeted with a unfamiliar error message.
 
-![Unable to open Macro](unable.png)
+![Unable to open Macro](/img/unable.png)
 
 This through me for a spin for quite some time.  I did some research on the issue and found that it's quite commonplace for malware authors to password protect their code. However, that wasn't the case with this document, as it simply wouldn't let us interact with the macro at all.
 
@@ -194,11 +194,11 @@ It turns out that the malware authors had read the same article as me, using a t
 
 After compiling the project quick and running it with the `-uu` flag I was able to create a secondary document with all the macros unlocked and viewable.
 
-![Doc Unhidden](evlclippy_work.png)
+![Doc Unhidden](/img/evlclippy_work.png)
 
 
 
-![Debugger](debugger.png)
+![Debugger](/img/debugger.png)
 
 ## Understanding the Code
 
@@ -242,7 +242,7 @@ The obfuscation begins!  Clearly all of the arguments passed into the `URLDownlo
 
 If we go ahead and skip ahead through execution and set a breakpoint on the `homedep()` function, we can inspect the return contents to see the URL it ends up producing.
 
-![Produced URL](produced_url.png)
+![Produced URL](/img/produced_url.png)
 
 That's great and all....but we want ALL the domains.  So let's dive into how their decoding them so we can do just that :D.
 
@@ -305,7 +305,7 @@ Now, I've been following each one of these variables in the debugger window this
 
 I was able to find out this nice trick to be able to view it but going to `View->Immediate Window` which opens up a debug window that I manually use to print out the variable value.
 
-![Immediate Window Debug](debug.png)
+![Immediate Window Debug](/img/debug.png)
 
 ### Implementing in Python
 
@@ -318,7 +318,7 @@ Below is the Python code I wrote utilizing the `openpyxml` library to do most of
 
 Here's it running on the document:
 
-![Python Running](python_run.png)
+![Python Running](/img/python_run.png)
 
 
 **References:**
