@@ -2,9 +2,8 @@
 title: "Dissecting a Dridex Dropper"
 date: 2021-01-29
 type: "post"
-bigimg: [{src: "/img/DRIDEX.png"}]
 ---
-
+![Dridex Image](/img/DRIDEX.jpg)
 
 ## Grabbing some Samples
 Since I wanted to make sure and grab some more recent samples, I headed over to [Malware Bazaar](https://bazaar.abuse.ch/) to grab a few samples.  Since the database is searchable, I can throw in keyword searches (like Dridex) in order to filter the malware samples that I get back.  
